@@ -38,13 +38,7 @@ class Stack {
 
 }
 
-function print(stack){
-    let curr = stack.top
-    while(curr !== null){
-        console.log(curr.data)
-        curr = curr.next
-    }
-}
 
 
-module.exports = {print, Stack}
+
+module.exports = Stack

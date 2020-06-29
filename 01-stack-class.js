@@ -6,7 +6,7 @@ See Stack.js
 
 */
 
-const { Stack, print } = require('./Stack')
+const Stack = require('./Stack')
 
 
 const starTrek = new Stack()
@@ -17,8 +17,6 @@ starTrek.push('Spock')
 starTrek.push('McCoy')
 starTrek.push('Scotty')
 
-
-print(starTrek)
 
 //node 01-stack-class
 
