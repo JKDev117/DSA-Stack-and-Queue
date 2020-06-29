@@ -16,3 +16,27 @@ console.log(is_palindrome("1001"));
 console.log(is_palindrome("Tauhida"));  
 */
 
+const Stack = require("./Stack");
+
+
+function is_palindrome(s) {  
+    s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");  
+    // Your code goes here  
+    const array = s.split('')
+    let s_backwards = ''
+    const stack = new Stack()
+    array.forEach(element => stack.push(element))
+    for(let i=0; i < s.length; i++){
+        s_backwards += stack.pop()
+    }
+    return s == s_backwards
+}  
+
+
+console.log(is_palindrome("dad"));  //=> true
+console.log(is_palindrome("A man, a plan, a canal: Panama"));  //=> true  
+console.log(is_palindrome("1001"));  //=> true  
+console.log(is_palindrome("Tauhida"));  //=> false
+
+
+//node 03-palindrome
