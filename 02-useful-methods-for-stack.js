@@ -9,10 +9,13 @@ isEmpty(): allows you to check if the stack is empty or not
 display(): to display the stack - what is the 1st item in your stack?  
 
 Remove McCoy from your stack and display the stack  
+
+
+see outside-functions.js
 */
 
 const Stack = require('./Stack')
-
+const { peek, isEmpty, display } = require('./outside-functions')
 
 const starTrek = new Stack()
 
@@ -21,25 +24,6 @@ starTrek.push('Kirk')
 starTrek.push('Spock')
 starTrek.push('McCoy')
 starTrek.push('Scotty')
-
-/* ---------------------------------------------- */
-
-
-function peek(stack){
-    return stack.top.data
-}
-
-function isEmpty(stack){
-    return stack.top == null
-}
-
-function display(stack){
-    let curr = stack.top
-    while(curr !== null){
-        console.log(curr.data)
-        curr = curr.next
-    }
-}
 
 /* ---------------------------------------------- */
 
@@ -56,18 +40,6 @@ console.log()
 starTrek.pop()
 starTrek.pop()
 display(starTrek) //=> Spock, Kirk
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //node 02-useful-methods-for-stack
